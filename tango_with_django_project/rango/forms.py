@@ -22,7 +22,7 @@ class PageForm(forms.ModelForm):
         if 'url' in cleaned_data:
             url = cleaned_data.get('url')
 
-            if not url.startswith('http://'):
+            if url and not url.startswith('http://'):
                 url = 'http://' + url
 
             cleaned_data['url'] = url
