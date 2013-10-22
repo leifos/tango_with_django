@@ -1,0 +1,23 @@
+If you are really new to Django and you clone this awesome project and if it not working for you in your home computer,I suggest you to follow the below steps
+
+1. This project uses Python Imaging Library for image processing 
+
+Link : " http://www.pythonware.com/products/pil/ "
+
+2. Download and install the PIP module 
+
+3. If you are in  Windows,you might probably get stuck at installation process, if not...go ahead and enjoy
+
+4. If you get stuck at Python registry problem,you need to download PyReg script.
+
+Link : " http://tech.valgog.com/2010/01/after-installing-64-bit-windows-7-at.html "  //Awesome post
+
+5. Copy paste that code in your favorite editor and run in your system,where you should end up getting "Python 2.x/3.x version is now registered"
+
+6. Now you can install the PIP module successfull
+
+7. Go to your "tango_with_django" folder and run  "./manage.py syncdb" 
+
+8. The above process will create database and various tables defined in the database
+
+9. Now you are one step closer to run the project....go ahead and run your server "./manage.py runserver "
