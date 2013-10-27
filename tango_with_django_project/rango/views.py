@@ -288,7 +288,8 @@ def user_login(request):
                 return render_to_response('rango/login.html', context_dict, context)
         # Invalid login details supplied!
         else:
-            print "Invalid login details: {0}, {1}".format(username, password)
+            # In production environment, never output user password or other sensitive info in logs.
+            print "Invalid login user: {0}".format(username)    
             context_dict['bad_details'] = True
             return render_to_response('rango/login.html', context_dict, context)
 
