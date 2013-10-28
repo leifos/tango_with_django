@@ -18,6 +18,7 @@ class PageForm(forms.ModelForm):
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
 
     def clean(self):
+        super(PageForm, self).clean()
         cleaned_data = self.cleaned_data
         url = cleaned_data.get('url')
         
