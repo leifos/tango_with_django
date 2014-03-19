@@ -21,7 +21,7 @@
                     <h4>{{hero.description|truncatewords:20}}</h4>
                     <h4>Created by: <a href="/showcase/team/{{hero.team.id}}/">{{hero.team.name}}</a></h4>
                     {% if hero.rating_count > 0 %}
-                        {% if hero.rating_average > 2 %}
+                        {% if hero.rating_average > 4 %}
                             <span class="label success round">{{hero.rating_average}}</span>
                         {% else %}
                             <span class="label alert round">{{hero.rating_average}}</span>
@@ -35,26 +35,26 @@
         {% endif %}
         <div class="panel">
             {% if demos %}
-                    {% for d in demos %}
+                    {% for demo in demos %}
                     {% cycle '<div class="row">' '' %}
                         <div class="large-6 columns">
                             <div class="row">
                                 <div class="large-4 columns">
-                                <a class="th" href="/showcase/demo/show/{{d.id}}/">
-                                {% if d.screenshot %}
-                                    <img src="/media/{{d.screenshot}}" width="196" height="196" alt="{{d.name}}" />
+                                <a class="th" href="/showcase/demo/show/{{demo.id}}/">
+                                {% if demo.screenshot %}
+                                    <img src="/media/{{demo.screenshot}}" width="196" height="196" alt="{{demo.name}}" />
                                 {% else %}
-                                    <img width="196" height="196" src="http://lorempixel.com/196/{{d.id|add:196}}/abstract/" />
+                                    <img width="196" height="196" src="http://lorempixel.com/196/{{demo.id|add:196}}/abstract/" />
                                 {% endif %}
                                 </a>
 
                                 </div>
                                 <div class="large-8 columns">
                                     <h5>
-                                    <a href="/showcase/demo/show/{{d.id}}/">{{ d.name }}</a>
+                                    <a href="/showcase/demo/show/{{demo.id}}/">{{ demo.name }}</a>
                                    </h5>
-                                    <h6>{{d.tagline}}</h6>
-                                    <h6>Created by: <a href="/showcase/team/{{d.team.id}}/">{{d.team.name}}</a></h6>
+                                    <h6>{{demo.tagline}}</h6>
+                                    <h6>Created by: <a href="/showcase/team/{{demo.team.id}}/">{{demo.team.name}}</a></h6>
                                     {% include 'showcase/rating_score.html' %}
 
                                 </div>

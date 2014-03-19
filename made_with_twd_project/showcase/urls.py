@@ -19,4 +19,5 @@ urlpatterns = patterns('',
         url(r'^register/rater/$', views.register_rater, name='register_rater'),
         url(r'^login/$', views.user_login, name='login'),
         url(r'^logout/$', views.user_logout, name='logout'),
+        url(r'^about/$', views.ack, name='ack'),
 )

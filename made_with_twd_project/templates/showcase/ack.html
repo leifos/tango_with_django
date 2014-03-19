@@ -1,0 +1,26 @@
+{% extends 'showcase/base.html' %}
+{% load static %}
+
+{% block body_block %}
+        <div class="row">
+        <h2>About</h2>
+            <div class="callout panel">
+            <div class="row">
+                <div class="large-8 columns">
+
+                <p>This application provides a showcase of some of the work my students and others have build after going through the <a href="http://www.tangowithdjango.com">Tango With Django</a> book.</p>
+
+                <p>We would like to thank PythonAnywhere for their hosting service. <br/>
+                <a class="th" href="http://www.pythonanywhere.com"><img width="260px" src="{% static 'img/pa.png' %}" /></a>
+ </p>
+     <p>
+         We would also like to thank JetBrains for providing PyCharm!
+         <a class="th" href="http://www.jetbrains.com/pycharm/"><img width="200px" src="{% static 'img/pycharm.jpg' %}" /></a>
+</p>
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+{% endblock %}

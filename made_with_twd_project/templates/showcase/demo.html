@@ -15,6 +15,7 @@
 
                     Average Rating:
                     {% include 'showcase/rating_score.html' %}
+
 <br/>
 
                 </div>
@@ -46,7 +47,7 @@
                 {% for r in ratings %}
                 <div class="row">
                     <div class ="large-1 columns">
-                    {% if r.score > 2 %}
+                    {% if r.score > 4 %}
                     <span class="label success round">{{r.score}}</span>
                     {% else %}
                     <span class="label alert round">{{r.score}}</span>

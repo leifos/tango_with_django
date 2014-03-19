@@ -38,32 +38,32 @@
 
                 <div>
                 {% if demos %}
-                    {% for d in demos %}
+                    {% for demo in demos %}
                         <div class="row">
                             <div class="large-2 columns">
 
-                            <a class="th" href="{{d.url}}">
-                                {% if d.screenshot %}
-                                <img class="th" width="96" height="96" src="/media/{{d.screenshot}}" alt="{{d.name}}" />
+                            <a class="th" href="{{demo.url}}">
+                                {% if demo.screenshot %}
+                                <img class="th" width="96" height="96" src="/media/{{demo.screenshot}}" alt="{{demo.name}}" />
                              {% else %}
-                          <img width="96" height="96" src="http://lorempixel.com/96/{{d.id|add:96}}/technics/" />
+                          <img width="96" height="96" src="http://lorempixel.com/96/{{demo.id|add:96}}/technics/" />
                         {% endif %}
                             </a>
 
 
                         </div>
                         <div class="large-6 columns">
-                        <h4><a href="/showcase/demo/show/{{d.id}}/">{{ d.name }}</a> </h4>
-                        <h6>{{d.tagline}}</h6>
+                        <h4><a href="/showcase/demo/show/{{demo.id}}/">{{ demo.name }}</a> </h4>
+                        <h6>{{demo.tagline}}</h6>
                         <h6>Average Rating:
                        {% include 'showcase/rating_score.html' %}
                         </h6>
                         </div>
                         <div class="large-4 columns">
-                        <a class="button tiny" href="/showcase/demo/show/{{d.id}}/">View</a>
+                        <a class="button tiny" href="/showcase/demo/show/{{demo.id}}/">View</a>
                         {% if myteam %}
-                            <a class="button tiny" href="/showcase/demo/edit/{{d.id}}/">Edit</a>
-                            <a class="button tiny" href="/showcase/demo/delete/{{d.id}}/">Delete</a>
+                            <a class="button tiny" href="/showcase/demo/edit/{{demo.id}}/">Edit</a>
+                            <a class="button tiny" href="/showcase/demo/delete/{{demo.id}}/">Delete</a>
                         {% endif %}
 
                         </div>

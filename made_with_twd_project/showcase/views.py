@@ -352,3 +352,12 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/showcase/')
+
+
+def ack(request):
+    context = RequestContext(request)
+    context_dict = { }
+    add_hero_cats_to_context_dict(context_dict)
+    t = get_team(request.user)
+    add_isteam_to_context_dict(context_dict, t)
+    return render_to_response('showcase/ack.html', context_dict, context)
